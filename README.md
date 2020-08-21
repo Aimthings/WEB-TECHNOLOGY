@@ -1,2 +1,2 @@
 # WEB-TECHNOLOGY
-Java Assignments
+Web Technology Assignments
