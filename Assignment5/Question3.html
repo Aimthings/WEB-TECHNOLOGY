@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question3</title>
+</head>
+<body>
+ <script type="text/javascript">
+ var st_to_check= window.prompt("Enter bracket string without Inverted commas:");
+ document.write(st_to_check+":");
+ var val=nested_bracket_checker(st_to_check)
+ document.write(val)
+ if(val)
+ alert("Bracket string is balanced")
+ else
+ alert("Bracket string is not balanced")
+
+ function nested_bracket_checker(st_to_check){
+ var stack=[];
+ for(i=0;i<st_to_check.length;++i)
+ {  if(st_to_check.charAt(i)=='{'||st_to_check.charAt(i)=='('||st_to_check.charAt(i)=='[')
+    stack.push(st_to_check.charAt(i));
+    if(stack[stack.length-1]=='{' && st_to_check.charAt(i)=='}' || stack[stack.length-1]=='(' && st_to_check.charAt(i)==')' || stack[stack.length-1]=='[' && st_to_check.charAt(i)==']')
+    stack.pop();
+ }
+ return stack.length == 0;
+}
+ </script>
+</body>
+</html>
